@@ -1,0 +1,70 @@
+*{
+	margin: 0px;
+}
+.wrapper{
+	text-align: center;
+}
+.buttons{
+	margin-top: 20px;
+}
+.but{
+	margin: 3px;
+	font-size: 18px;
+}
+.but:hover{
+	box-shadow: 0 0 10px #C8C8C8FF;
+}
+#answer{
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+	font-family: 'Roboto', sans-serif;
+}
+.text{
+	text-align: justify;
+	margin-top: 30px;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+}
+.conts{
+	text-align: center;
+	margin: 0px;
+	padding: 20px;
+}
+.title{
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;	
+}
+
+.text1{
+	text-align: justify;
+	margin-top: 10px;
+	font-style: bold;
+	font-size: 30px;
+}
+
+.text2{
+	text-align: center;
+	margin-top: 10px;
+	font-style: bold;
+	font-size: 30px;
+}
+
+.ab_block{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.title_sect{
+	padding: 3px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.jumbotron{
+	margin-top: 60px;
+}
+
+.instr{
+	margin-left: 20px;
+}
