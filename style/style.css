@@ -27,7 +27,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 .conts{
-	text-align: center;
+	text-align: justify;
 	margin: 0px;
 	padding: 20px;
 }
@@ -44,7 +44,7 @@
 }
 
 .text2{
-	text-align: center;
+	text-align: justify;
 	margin-top: 10px;
 	font-style: bold;
 	font-size: 30px;
