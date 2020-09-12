@@ -13,12 +13,13 @@ clear_button.onclick = clearInput
 function handleButtonClick() 
 {
 	// GETS SQRT of input pole number
-	a = parseFloat(in_obj.value);
-	if (Number.isNaN(a) || a < 0){
+	
+	// Check parsed object
+	val = Number(in_obj.value);
+	if (Number.isNaN(val) || val < 0){
 		document.getElementById("answer").innerHTML = "Error: Enter non-negative real number!"
 	}else{
-		val = Math.sqrt(in_obj.value).toFixed(5);
-		document.getElementById("answer").innerHTML = "The root square of " +  a + " " +  "is " + val;
+		document.getElementById("answer").innerHTML = "The root square of " + val + " " +  "is " + Math.sqrt(val).toFixed(5);
 	}
 }
 
