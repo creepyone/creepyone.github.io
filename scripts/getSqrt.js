@@ -34,7 +34,7 @@ function handleButtonClick()
 
 function clearInput() 
 {
-	// Clears the input and anwer poles
+	// Clears the input and answer poles
 	document.getElementById("inp").value = document.getElementById("inp").defaultValue;
 	document.getElementById("answer").innerHTML = "";
 }
