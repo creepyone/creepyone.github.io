@@ -1,25 +1,34 @@
-  //variables
+//variables
 var in_obj = document.getElementById("inp");
 var clear_button = document.getElementById("clr_but")
 var button = document.getElementById("sqrtbtn");
-  //int precision = ... for dynamic precision
+//int precision = ... for dynamic precision
   
-  //events
-
+//events
 button.onclick = handleButtonClick;
 clear_button.onclick = clearInput
 
-  //event functions
+//event functions
 function handleButtonClick() 
 {
 	// GETS SQRT of input pole number
-	
-	// Check parsed object
 	val = Number(in_obj.value);
+	
+	// Check if input is correct
 	if (Number.isNaN(val) || val < 0){
-		document.getElementById("answer").innerHTML = "Error: Enter non-negative real number!"
+		var dic_errs = {
+			"ru": "Ошибка: Введите неотрицательное действительное число!",
+			"chinese": "錯誤：請輸入非負實數！",
+			"en": "Error: Enter non-negative real number!"
+		}
+		document.getElementById("answer").innerHTML = dic_errs[document.documentElement.lang];
 	}else{
-		document.getElementById("answer").innerHTML = "The root square of " + val + " " +  "is " + Math.sqrt(val).toFixed(5);
+		var dic_msgs = {
+			"ru": `Квадратный корень из ${val} это ${Math.sqrt(val).toFixed(5)}`,
+			"chinese": `${val}的平方根是${Math.sqrt(val).toFixed(5)}`,
+			"en": `The square root of ${val} is ${Math.sqrt(val).toFixed(5)}`	
+		}
+		document.getElementById("answer").innerHTML = dic_msgs[document.documentElement.lang];
 	}
 }
 
