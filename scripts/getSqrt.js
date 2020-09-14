@@ -17,9 +17,9 @@ function handleButtonClick()
 	// Check if input is correct
 	if (Number.isNaN(val)){
 		var dic_errs = {
-			"ru": "Ошибка: Введите неотрицательное действительное число!",
-			"chinese": "錯誤：請輸入非負實數！",
-			"en": "Error: Enter non-negative real number!"
+			"ru": "Ошибка: Введите действительное число!",
+			"chinese": "错误：输入实数！",
+			"en": "Error: Enter real number!"
 		}
 		document.getElementById("answer").innerHTML = dic_errs[document.documentElement.lang];
 	}else{
