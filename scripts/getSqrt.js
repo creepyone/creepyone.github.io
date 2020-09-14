@@ -15,7 +15,7 @@ function handleButtonClick()
 	val = Number(in_obj.value);
 	
 	// Check if input is correct
-	if (Number.isNaN(val) || val < 0){
+	if (Number.isNaN(val)){
 		var dic_errs = {
 			"ru": "Ошибка: Введите неотрицательное действительное число!",
 			"chinese": "錯誤：請輸入非負實數！",
@@ -24,11 +24,13 @@ function handleButtonClick()
 		document.getElementById("answer").innerHTML = dic_errs[document.documentElement.lang];
 	}else{
 		var dic_msgs = {
-			"ru": `Квадратный корень из ${val} это ${Math.sqrt(val).toFixed(5)}`,
-			"chinese": `${val}的平方根是${Math.sqrt(val).toFixed(5)}`,
-			"en": `The square root of ${val} is ${Math.sqrt(val).toFixed(5)}`	
+			"ru": `Квадратный корень из ${val} это ${Math.sqrt(Math.abs(val)).toFixed(5)}`,
+			"chinese": `${val}的平方根是${Math.sqrt(Math.abs(val)).toFixed(5)}`,
+			"en": `The square root of ${val} is ${Math.sqrt(Math.abs(val)).toFixed(5)}`	
 		}
 		document.getElementById("answer").innerHTML = dic_msgs[document.documentElement.lang];
+		// for negative numbers
+		if (val < 0) document.getElementById("answer").innerHTML += "i";
 	}
 }
 
