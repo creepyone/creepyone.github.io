@@ -23,14 +23,24 @@ function handleButtonClick()
 		}
 		document.getElementById("answer").innerHTML = dic_errs[document.documentElement.lang];
 	}else{
+		// dictionary with messages if number is negative 
+		var dic_msgs_neg = {
+			"ru": `Квадратный корень из ${val} это ${Math.sqrt(Math.abs(val)).toFixed(5)}i и -${Math.sqrt(Math.abs(val)).toFixed(5)}i`,
+			"chinese": `${val}的平方根是${Math.sqrt(Math.abs(val)).toFixed(5)} 和 -${Math.sqrt(Math.abs(val)).toFixed(5)}i`,
+			"en": `The square root of ${val} is ${Math.sqrt(Math.abs(val)).toFixed(5)} and -${Math.sqrt(Math.abs(val)).toFixed(5)}i`	
+		}
+		// dictionary with messages if number is positive
 		var dic_msgs = {
 			"ru": `Квадратный корень из ${val} это ${Math.sqrt(Math.abs(val)).toFixed(5)}`,
 			"chinese": `${val}的平方根是${Math.sqrt(Math.abs(val)).toFixed(5)}`,
 			"en": `The square root of ${val} is ${Math.sqrt(Math.abs(val)).toFixed(5)}`	
 		}
-		document.getElementById("answer").innerHTML = dic_msgs[document.documentElement.lang];
-		// for negative numbers
-		if (val < 0) document.getElementById("answer").innerHTML += "i";
+		// Check if number is positive or negative
+		if (val >= 0){
+			document.getElementById("answer").innerHTML = dic_msgs[document.documentElement.lang];
+		}else{
+			document.getElementById("answer").innerHTML = dic_msgs_neg[document.documentElement.lang];
+		}
 	}
 }
 
