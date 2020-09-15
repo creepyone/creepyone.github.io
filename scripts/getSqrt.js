@@ -15,7 +15,7 @@ function handleButtonClick()
 	val = Number(in_obj.value);
 	
 	// Check if input is correct
-	if (isNaN(val)){
+	if (Number.isNaN(val)){
 		var dic_errs = {
 			"ru": "Ошибка: Введите действительное число!",
 			"chinese": "错误：输入实数！",
