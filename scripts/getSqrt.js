@@ -26,8 +26,8 @@ function handleButtonClick()
 		// dictionary with messages if number is negative 
 		var dic_msgs_neg = {
 			"ru": `Квадратный корень из ${val} это ${Math.sqrt(Math.abs(val)).toFixed(5)}i и -${Math.sqrt(Math.abs(val)).toFixed(5)}i`,
-			"chinese": `${val}的平方根是${Math.sqrt(Math.abs(val)).toFixed(5)} 和 -${Math.sqrt(Math.abs(val)).toFixed(5)}i`,
-			"en": `The square root of ${val} is ${Math.sqrt(Math.abs(val)).toFixed(5)} and -${Math.sqrt(Math.abs(val)).toFixed(5)}i`	
+			"chinese": `${val}的平方根是${Math.sqrt(Math.abs(val)).toFixed(5)}i 和 -${Math.sqrt(Math.abs(val)).toFixed(5)}i`,
+			"en": `The square root of ${val} is ${Math.sqrt(Math.abs(val)).toFixed(5)}i and -${Math.sqrt(Math.abs(val)).toFixed(5)}i`	
 		}
 		// dictionary with messages if number is positive
 		var dic_msgs = {
